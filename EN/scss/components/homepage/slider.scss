@@ -1,0 +1,64 @@
+@use '../../functions' as f;
+@use '../../mixins' as m;
+@use '../../variables' as v;
+
+#slider {
+    background: #CDFBF2;
+    background: linear-gradient(117deg, rgba(205, 251, 242, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(223, 243, 254, 1) 100%);
+    .slider-container {
+        padding-block: 5rem;
+        @include m.flex($justify: center, $items: center);
+        @include m.respond(sm) {
+            padding-block: 7rem;
+        }
+        .content {
+            @include m.flex($direction: column, $justify: start, $items: center, $gap: calc(0.25rem * 6));
+            max-width: 48rem;
+
+            .pill {
+                background-color: f.mix-color($base: var(--colors), $with: transparent, $opacity: 10%);
+                color: var(--colors);
+                font-size: 12px;
+                padding: 8px 16px;
+                text-align: center;
+                border: 1px solid f.mix-color($base: var(--colors), $with: transparent, $opacity: 20%);
+                border-radius: 999em;
+            }
+
+            .title {
+                font-size: 30px;
+                font-weight: 600;
+                text-align: center;
+                color: var(--text-colors);
+                @include m.respond(sm) {
+                    font-size: 48px;
+                }
+            }
+
+            .desc {
+                line-height: 1.7;
+                font-size: 16px;
+                color: f.mix-color($base: var(--text-colors), $with: transparent, $opacity: 70%);
+                text-align: center;
+            }
+
+            .cta-wrapper {
+                @include m.flex($justify: center, $items: center, $gap: .5rem, $wrap: wrap);
+
+                .cta {
+                    @include m.button($pb: 14px, $pi: 28px);
+                    font-size: 14px;
+                }
+            }
+
+            .addons {
+                @include m.flex($justify: center, $items: center, $gap: clamp(1rem, 3vw, 2rem), $wrap: wrap);
+
+                .addon {
+                    color: f.mix-color($base: var(--text-colors), $with: transparent, $opacity: 50%);
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

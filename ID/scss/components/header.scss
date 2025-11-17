@@ -1,0 +1,53 @@
+@use '../functions' as f;
+@use '../mixins' as m;
+@use '../variables' as v;
+
+#header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+
+    .header-container {
+        padding-block: 0.2rem;
+        border-bottom: 1px solid f.mix-color($base: black, $with: transparent, $opacity: 5%);
+        .content {
+            @include m.flex($justify: space-between, $items: center);
+
+            .brand {
+                img {
+                    width: 180px;
+                }
+            }
+
+            .navs {
+                display: none;
+                @include m.respond(sm) {
+                    @include m.flex($justify: space-between, $items: center, $gap: .8rem);
+                }
+
+                .nav-link {
+                    color: var(--text-colors);
+                    text-decoration: none;
+                    transition: f.trans();
+                    &:hover {
+                        color: var(--colors);
+                    }
+                }
+
+                .cta {
+                    @include m.button();
+                    margin-left: .8rem;
+                }
+            }
+
+
+            .hamburger {
+                @include m.button($pb: .4rem, $pi: .4rem, $fs: 1.4rem, $br: 8px);
+                border: none;
+                @include m.respond(sm) {
+                    display: none;
+                }
+            }
+        }
+    }
+}

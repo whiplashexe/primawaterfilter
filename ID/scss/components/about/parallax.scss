@@ -1,0 +1,27 @@
+
+@use '../../functions' as f;
+@use '../../mixins' as m;
+@use '../../variables' as v;
+
+
+#about_parallax {
+    background-color: var(--colors);
+    .about_parallax-container {
+        .content {
+            @include m.flex($direction: column, $justify: start, $items: stretch, $gap: 3rem);
+
+            .section-title {
+                color: white;
+            }
+
+            .section-description {
+                color: f.mix-color($base: white, $with: transparent, $opacity: 70%);
+            }
+
+            .cta {
+                margin-top: .8rem;
+                @include m.button($fs: 16px, $bg: white, $cl: var(--colors));
+            }
+        }
+    }
+}

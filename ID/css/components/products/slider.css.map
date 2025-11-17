@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../../../scss/components/products/slider.scss","../../../scss/_mixins.scss"],"names":[],"mappings":"AAIA;EACI;EACA;;AAGI;EACI;ECOV;EACA,gBDPwE;ECQxE,iBDRoC;ECSpC,aDToD;ECUpD,WAPO;EAUL,KDboF;EAC5E;;AAEA;EACI;EACA;EACA;EACA;;ACcZ;EDlBQ;IAOQ;;;AAIR;EACI;EACA;EACA;EACA","file":"slider.css"}

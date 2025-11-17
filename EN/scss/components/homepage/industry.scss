@@ -1,0 +1,74 @@
+@use '../../functions' as f;
+@use '../../mixins' as m;
+@use '../../variables' as v;
+
+#industry {
+    background-color: white;
+    .industry-container {
+        .content {
+            @include m.flex($direction: column, $justify: start, $items: stretch, $gap: 2rem);
+
+            .options-btn {
+                @include m.flex($justify: center, $items: center, $gap: 8px, $wrap: wrap);
+
+                .option-btn {
+                    border: none;
+                    @include m.button($bg: white, $cl: var(--text-colors));
+                    border: 1px solid f.mix-color($base: var(--colors), $with: transparent, $opacity: 10%);
+                    &:hover {
+                        background-color: white;
+                        border: 1px solid f.mix-color($base: var(--colors), $with: transparent, $opacity: 30%);
+                    }
+                    &.btn-active {
+                        background-color: var(--colors);
+                        color: white;
+                    }
+                }
+            }
+
+            .card-wrapper {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: clamp(.8rem, 3vw, 1rem);
+
+                @include m.respond(sm) {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+
+                .card {
+                    background-color: white;
+                    border-radius: 20px;
+                    padding: clamp(1rem, 3vw, 2rem);
+                    border: 1px solid f.mix-color($base: black, $with: transparent, $opacity: 10%);
+                    @include m.flex($direction: column, $justify: start, $items: start, $gap: .6rem);
+
+                    .title {
+                        font-size: 16px;
+                        color: var(--text-colors);
+                        font-family: var(--primtext);
+                        font-weight: 500;
+                    }
+                    .desc {
+                        font-size: 14px;
+                        font-family: var(--primtext);
+                        font-weight: 400;
+                        line-height: 1.6;
+                        color: f.mix-color($base: var(--text-colors), $with: transparent, $opacity: 50%);
+                    }
+
+                    .cta {
+                        text-decoration: none;
+                        font-size: 14px;
+                        margin-top: 1rem;
+                        color: var(--colors);
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+

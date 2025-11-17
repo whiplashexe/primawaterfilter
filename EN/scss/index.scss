@@ -1,0 +1,59 @@
+@use 'functions' as f;
+@use 'mixins' as m;
+@use 'variables' as v;
+
+:root {
+    --colors: #009688;
+    --text-colors: oklch(20.8% 0.042 265.755);
+    --background: #0E172B;
+    // --primtext: "Inter", sans-serif; 
+    --primtext: 'DINNextRoundedLTW01-Light', sans-serif;
+}
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--primtext);
+    font-size: .9rem;
+}
+
+.container {
+    padding-inline: 5%;
+    padding-block: 3rem;
+    @include m.respond(sm) {
+        padding-block: 5rem;
+        padding-inline: 10%;
+    }
+}
+
+.section-header {
+    max-width: 700px;
+    margin-inline: auto;
+    @include m.flex($direction: column, $justify: center, $items: center, $gap: .8rem);
+    .section-span {
+        text-transform: uppercase;
+        font-size: 12px;
+        color: var(--text-colors);
+        font-weight: 200;
+        text-align: center;
+    }
+    .section-title {
+        color: var(--text-colors);
+        font-size: 24px;
+        font-weight: 500;
+        text-align: center;
+        @include m.respond(sm) {
+            font-size: 30px;
+        }
+    }
+    .section-description {
+        color: f.mix-color($base: var(--text-colors), $with: transparent, $opacity: 70%);
+        text-align: center;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+}

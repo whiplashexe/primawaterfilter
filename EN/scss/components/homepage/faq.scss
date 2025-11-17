@@ -1,0 +1,92 @@
+@use '../../functions' as f;
+@use '../../mixins' as m;
+@use '../../variables' as v;
+
+
+#faq {
+    background-color: f.mix-color($base: var(--colors), $with: transparent, $opacity: 3%);
+    .faq-container {
+        .content {
+            @include m.flex($direction: column, $justify: start, $items: center, $gap: 3rem);
+
+            .header {
+                @include m.flex($justify: center, $items: center);
+
+                .title {
+                    font-size: 24px;
+                    color: var(--text-colors);
+                    font-weight: 600;
+                }
+            }
+
+            .card-wrapper {
+                width: 100%;
+                max-width: 64rem;
+                border: 1px solid f.mix-color($base: black, $with: transparent, $opacity: 5%);
+                border-radius: 20px;
+                overflow: hidden;
+
+
+                .card {
+                    overflow: hidden;
+                    padding: clamp(1.6rem, 3vw, 1.8rem);
+                    border-bottom: 1px solid f.mix-color($base: black, $with: transparent, $opacity: 5%);
+                    display: grid;
+                    transition: f.trans();
+                    grid-template-columns: 1fr;
+                    grid-template-rows: auto 0fr;
+                    background-color: white;
+                    &:last-child {
+                        border-bottom: none;
+                    }
+
+                    .question {
+                        @include m.flex($justify: space-between, $items: center, $gap: 1rem);
+                        .title {
+                            font-size: 16px;
+                            font-weight: 500;
+                            line-height: 1.8;
+                            color: var(--text-colors);
+                        }
+                        .faq-btn {
+                            border: none;
+                            background-color: transparent;
+                            cursor: pointer;
+                            @include m.flex();
+                            transition: f.trans();
+
+                            &.faq-active {
+                                rotate: 45deg;
+                            }
+
+                            i {
+                                font-size: 12px;
+                                color: var(--text-colors);
+                            }
+                        }
+                    }
+
+
+                    .answer {
+                        transition: f.trans();
+                        overflow: hidden;
+                        .desc {
+                            font-size: 14px;
+                            color: f.mix-color($base: var(--text-colors), $with: transparent, $opacity: 70%);
+                            line-height: 1.6;
+                        }
+                        &.faq-active {
+                            padding-top: 1rem;
+                        }
+                    }
+                }
+
+                .card.faq-active {
+                    grid-template-rows: auto 1fr;
+                }
+            }
+        }
+
+    }
+}
+

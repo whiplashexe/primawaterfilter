@@ -1,0 +1,35 @@
+#service_parallax {
+  background-color: var(--colors);
+}
+#service_parallax .service_parallax-container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: 3rem;
+}
+#service_parallax .service_parallax-container .content .section-title {
+  color: white;
+}
+#service_parallax .service_parallax-container .content .section-description {
+  color: color-mix(in srgb, white 70%, transparent);
+}
+#service_parallax .service_parallax-container .content .cta {
+  margin-top: 0.8rem;
+  background-color: white;
+  padding-block: 10px;
+  padding-inline: 20px;
+  border-radius: 0.75rem;
+  color: var(--colors);
+  font-family: var(--primtext);
+  font-size: 16px;
+  transition: all ease-in-out 0.3s;
+  text-decoration: none;
+  cursor: pointer;
+}
+#service_parallax .service_parallax-container .content .cta:hover {
+  background-color: color-mix(in srgb, var(--colors) 70%, black);
+}
+
+/*# sourceMappingURL=parallax.css.map */

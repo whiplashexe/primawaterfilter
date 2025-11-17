@@ -1,0 +1,55 @@
+#service_list {
+  background-color: white;
+}
+#service_list .service_list-container .content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1rem, 3vw, 2rem);
+}
+@media (min-width: 768px) {
+  #service_list .service_list-container .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+#service_list .service_list-container .content .card {
+  padding: clamp(2rem, 3vw, 2.4rem);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: nowrap;
+  gap: 14px;
+  border: 1px solid color-mix(in srgb, black 10%, transparent);
+}
+#service_list .service_list-container .content .card .title {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--text-colors);
+}
+#service_list .service_list-container .content .card .list {
+  padding-left: 1rem;
+}
+#service_list .service_list-container .content .card p, #service_list .service_list-container .content .card li {
+  font-size: 14px;
+  color: color-mix(in srgb, var(--text-colors) 60%, transparent);
+  line-height: 1.6;
+}
+#service_list .service_list-container .content .card .cta {
+  margin-top: 1rem;
+  background-color: var(--colors);
+  padding-block: 10px;
+  padding-inline: 20px;
+  border-radius: 0.75rem;
+  color: white;
+  font-family: var(--primtext);
+  font-size: 0.8rem;
+  transition: all ease-in-out 0.3s;
+  text-decoration: none;
+  cursor: pointer;
+}
+#service_list .service_list-container .content .card .cta:hover {
+  background-color: color-mix(in srgb, var(--colors) 70%, black);
+}
+
+/*# sourceMappingURL=list.css.map */

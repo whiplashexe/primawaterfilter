@@ -1,0 +1,39 @@
+
+@use '../../functions' as f;
+@use '../../mixins' as m;
+@use '../../variables' as v;
+
+
+#parallax {
+    background-color: var(--colors);
+    .parallax-container {
+        .content {
+            @include m.flex($direction: column, $justify: start, $items: stretch, $gap: 3rem);
+
+            .section-title {
+                color: white;
+            }
+
+            .section-description {
+                color: f.mix-color($base: white, $with: transparent, $opacity: 70%);
+            }
+
+            .cta-wrapper {
+                @include m.flex($justify: center, $items: center, $gap: 8px);
+                .cta {
+                    margin-top: .8rem;
+                    @include m.button($fs: 16px, $pb: 14px, $pi: 24px, $bg: white, $cl: var(--colors));
+                    &.alternative {
+                        color: white;
+                        border: 1px solid f.mix-color($base: white, $with: transparent, $opacity: 30%);
+
+                        &:hover {
+                            color: white;
+                            background-color: f.mix-color($base: white, $with: transparent, $opacity: 10%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

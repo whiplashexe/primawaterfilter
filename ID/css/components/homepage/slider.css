@@ -1,0 +1,104 @@
+#slider {
+  background: #CDFBF2;
+  background: linear-gradient(117deg, rgb(205, 251, 242) 0%, rgb(255, 255, 255) 50%, rgb(223, 243, 254) 100%);
+}
+#slider .slider-container {
+  padding-block: 5rem;
+}
+@media (min-width: 768px) {
+  #slider .slider-container {
+    padding-block: 7rem;
+  }
+}
+#slider .slider-container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: nowrap;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  #slider .slider-container .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 2rem;
+  }
+}
+#slider .slider-container .content .content-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+#slider .slider-container .content .content-1 .title {
+  font-size: 30px;
+  color: var(--text-colors);
+  font-weight: 500;
+  line-height: 1.4;
+}
+@media (min-width: 768px) {
+  #slider .slider-container .content .content-1 .title {
+    font-size: 48px;
+  }
+}
+#slider .slider-container .content .content-1 .description {
+  font-size: 1rem;
+  color: var(--text-colors);
+  line-height: 2;
+}
+#slider .slider-container .content .content-1 .cta-wrapper {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.6rem;
+}
+#slider .slider-container .content .content-1 .cta-wrapper .cta {
+  background-color: var(--colors);
+  padding-block: 1rem;
+  padding-inline: 20px;
+  border-radius: 0.75rem;
+  color: white;
+  font-family: var(--primtext);
+  font-size: 0.8rem;
+  transition: all ease-in-out 0.3s;
+  text-decoration: none;
+  cursor: pointer;
+}
+#slider .slider-container .content .content-1 .cta-wrapper .cta:hover {
+  background-color: color-mix(in srgb, var(--colors) 70%, black);
+}
+#slider .slider-container .content .content-1 .cta-wrapper .cta.cta-2 {
+  background-color: transparent;
+  color: var(--text-colors);
+  border: 1px solid color-mix(in srgb, transparent 90%, black);
+}
+#slider .slider-container .content .content-1 .cta-wrapper .cta.cta-2:hover {
+  color: var(--colors);
+  border-color: var(--colors);
+}
+#slider .slider-container .content .content-2 {
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 16/12;
+}
+#slider .slider-container .content .content-2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (min-width: 768px) {
+  #slider .slider-container .content .content-1, #slider .slider-container .content .content-2 {
+    width: 50%;
+  }
+}
+
+/*# sourceMappingURL=slider.css.map */

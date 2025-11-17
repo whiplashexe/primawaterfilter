@@ -1,0 +1,83 @@
+#header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+#header .header-container {
+  padding-block: 0.2rem;
+  border-bottom: 1px solid color-mix(in srgb, black 5%, transparent);
+}
+#header .header-container .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+#header .header-container .content .brand img {
+  width: 180px;
+}
+#header .header-container .content .navs {
+  display: none;
+}
+@media (min-width: 768px) {
+  #header .header-container .content .navs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0.8rem;
+  }
+}
+#header .header-container .content .navs .nav-link {
+  color: var(--text-colors);
+  text-decoration: none;
+  transition: all ease-in-out 0.3s;
+}
+#header .header-container .content .navs .nav-link:hover {
+  color: var(--colors);
+}
+#header .header-container .content .navs .cta {
+  background-color: var(--colors);
+  padding-block: 10px;
+  padding-inline: 20px;
+  border-radius: 0.75rem;
+  color: white;
+  font-family: var(--primtext);
+  font-size: 0.8rem;
+  transition: all ease-in-out 0.3s;
+  text-decoration: none;
+  cursor: pointer;
+}
+#header .header-container .content .navs .cta:hover {
+  background-color: color-mix(in srgb, var(--colors) 70%, black);
+}
+#header .header-container .content .navs .cta {
+  margin-left: 0.8rem;
+}
+#header .header-container .content .hamburger {
+  background-color: var(--colors);
+  padding-block: 0.4rem;
+  padding-inline: 0.4rem;
+  border-radius: 8px;
+  color: white;
+  font-family: var(--primtext);
+  font-size: 1.4rem;
+  transition: all ease-in-out 0.3s;
+  text-decoration: none;
+  cursor: pointer;
+}
+#header .header-container .content .hamburger:hover {
+  background-color: color-mix(in srgb, var(--colors) 70%, black);
+}
+#header .header-container .content .hamburger {
+  border: none;
+}
+@media (min-width: 768px) {
+  #header .header-container .content .hamburger {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,50 @@
+@use '../../functions' as f;
+@use '../../mixins' as m;
+@use '../../variables' as v;
+
+#about-visimisi {
+    background-color: f.mix-color($base: var(--colors), $with: transparent, $opacity: 3%);
+    .about-visimisi-container {
+        .content {
+            @include m.flex($direction: column, $justify: start, $items: stretch, $gap: 3rem);
+
+            .card-wrapper {
+                @include m.flex($direction: column, $justify: start, $items: stretch, $gap: 1rem);
+                @include m.respond(sm) {
+                    @include m.flex($direction: row, $justify: center, $items: stretch, $gap: 2rem);
+                }
+
+                .content-wrapper {
+                    background-color: white;
+                    padding: clamp(1.2rem, 3vw, 2rem);
+                    border-radius: 20px;
+                    border: 1px solid f.mix-color($base: black, $with: transparent, $opacity: 10%);
+                    @include m.flex($direction: column, $justify: start, $items: start, $gap: .8rem);
+                    @include m.respond(sm) {
+                        width: 50%;
+                    }
+
+                    .title {
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: var(--colors);
+
+                    }
+                    .visi-text {
+                        line-height: 1.8;
+                        color: f.mix-color($base: var(--text-colors), $with: transparent, $opacity: 60%);
+                    }
+
+                    .misi-text {
+                        padding-left: 1rem;
+
+                        li {
+                            line-height: 1.8;
+                            color: f.mix-color($base: var(--text-colors), $with: transparent, $opacity: 60%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

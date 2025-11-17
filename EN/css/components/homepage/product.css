@@ -1,0 +1,107 @@
+#product {
+  background-color: color-mix(in srgb, var(--colors) 3%, transparent);
+}
+#product .product-container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: 2rem;
+}
+#product .product-container .content .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+#product .product-container .content .header .title {
+  font-size: 24px;
+  color: var(--text-colors);
+  font-weight: 600;
+}
+#product .product-container .content .header .cta {
+  color: var(--colors);
+  text-decoration: none;
+  font-size: 14px;
+}
+#product .product-container .content .header .cta:hover {
+  text-decoration: underline;
+}
+#product .product-container .content .card-wrapper {
+  gap: clamp(1rem, 3vw, 1.8rem);
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width: 768px) {
+  #product .product-container .content .card-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+#product .product-container .content .card-wrapper .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, black 10%, transparent);
+}
+#product .product-container .content .card-wrapper .card .cover {
+  width: 100%;
+}
+#product .product-container .content .card-wrapper .card .content-wrapper {
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: nowrap;
+  gap: 0.8rem;
+}
+#product .product-container .content .card-wrapper .card .content-wrapper .title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-colors);
+}
+#product .product-container .content .card-wrapper .card .content-wrapper .desc {
+  font-size: 14px;
+  color: color-mix(in srgb, var(--text-colors) 70%, transparent);
+}
+#product .product-container .content .card-wrapper .card .content-wrapper .cta-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.4rem;
+}
+#product .product-container .content .card-wrapper .card .content-wrapper .cta-wrapper .cta {
+  background-color: var(--colors);
+  padding-block: 10px;
+  padding-inline: 20px;
+  border-radius: 0.75rem;
+  color: white;
+  font-family: var(--primtext);
+  font-size: 0.8rem;
+  transition: all ease-in-out 0.3s;
+  text-decoration: none;
+  cursor: pointer;
+}
+#product .product-container .content .card-wrapper .card .content-wrapper .cta-wrapper .cta.alternative {
+  background-color: transparent;
+  color: var(--text-colors);
+  border: 1px solid color-mix(in srgb, black 10%, transparent);
+}
+#product .product-container .content .card-wrapper .card .content-wrapper .cta-wrapper .cta.alternative:hover {
+  border: 1px solid color-mix(in srgb, var(--colors) 20%, transparent);
+  color: var(--colors);
+  background-color: transparent;
+}
+#product .product-container .content .card-wrapper .card .content-wrapper .cta-wrapper .cta:hover {
+  background-color: color-mix(in srgb, var(--colors) 70%, black);
+}
+
+/*# sourceMappingURL=product.css.map */

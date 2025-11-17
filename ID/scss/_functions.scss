@@ -1,0 +1,7 @@
+@function mix-color($base: var(--colors), $with: black, $opacity: 70%) {
+  @return color-mix(in srgb, $base $opacity, $with);
+}
+
+@function trans($section: all, $ease: ease-in-out, $duration: .3s) {
+  @return $section $ease $duration;
+}

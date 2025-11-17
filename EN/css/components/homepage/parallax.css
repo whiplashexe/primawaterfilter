@@ -1,0 +1,61 @@
+#parallax {
+  background-color: var(--colors);
+}
+#parallax .parallax-container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: 3rem;
+}
+#parallax .parallax-container .content .section-title {
+  color: white;
+}
+#parallax .parallax-container .content .section-description {
+  color: color-mix(in srgb, white 70%, transparent);
+}
+#parallax .parallax-container .content .cta-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 8px;
+}
+#parallax .parallax-container .content .cta-wrapper .cta {
+  margin-top: 0.8rem;
+  background-color: white;
+  padding-block: 14px;
+  padding-inline: 24px;
+  border-radius: 0.75rem;
+  color: var(--colors);
+  font-family: var(--primtext);
+  font-size: 16px;
+  transition: all ease-in-out 0.3s;
+  text-decoration: none;
+  cursor: pointer;
+}
+#parallax .parallax-container .content .cta-wrapper .cta.alternative {
+  background-color: transparent;
+  color: var(--text-colors);
+  border: 1px solid color-mix(in srgb, black 10%, transparent);
+}
+#parallax .parallax-container .content .cta-wrapper .cta.alternative:hover {
+  border: 1px solid color-mix(in srgb, var(--colors) 20%, transparent);
+  color: var(--colors);
+  background-color: transparent;
+}
+#parallax .parallax-container .content .cta-wrapper .cta:hover {
+  background-color: color-mix(in srgb, var(--colors) 70%, black);
+}
+#parallax .parallax-container .content .cta-wrapper .cta.alternative {
+  color: white;
+  border: 1px solid color-mix(in srgb, white 30%, transparent);
+}
+#parallax .parallax-container .content .cta-wrapper .cta.alternative:hover {
+  color: white;
+  background-color: color-mix(in srgb, white 10%, transparent);
+}
+
+/*# sourceMappingURL=parallax.css.map */

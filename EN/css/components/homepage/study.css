@@ -1,0 +1,84 @@
+#study {
+  background-color: white;
+}
+#study .study-container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: 2rem;
+}
+#study .study-container .content .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+#study .study-container .content .header .title {
+  font-size: 24px;
+  color: var(--text-colors);
+  font-weight: 600;
+}
+#study .study-container .content .header .cta {
+  color: var(--colors);
+  text-decoration: none;
+  font-size: 14px;
+}
+#study .study-container .content .header .cta:hover {
+  text-decoration: underline;
+}
+#study .study-container .content .card-wrapper {
+  gap: clamp(1rem, 3vw, 1.8rem);
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width: 768px) {
+  #study .study-container .content .card-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+#study .study-container .content .card-wrapper .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, black 10%, transparent);
+}
+#study .study-container .content .card-wrapper .card .content-wrapper {
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: nowrap;
+  gap: 0.8rem;
+}
+#study .study-container .content .card-wrapper .card .content-wrapper .category {
+  font-size: 14px;
+  color: color-mix(in srgb, var(--text-colors) 50%, transparent);
+}
+#study .study-container .content .card-wrapper .card .content-wrapper .title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-colors);
+}
+#study .study-container .content .card-wrapper .card .content-wrapper .desc {
+  font-size: 14px;
+  color: color-mix(in srgb, var(--text-colors) 70%, transparent);
+  line-height: 1.7;
+}
+#study .study-container .content .card-wrapper .card .content-wrapper .cta {
+  color: var(--colors);
+  text-decoration: none;
+  font-size: 14px;
+}
+#study .study-container .content .card-wrapper .card .content-wrapper .cta:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=study.css.map */

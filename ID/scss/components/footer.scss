@@ -1,0 +1,64 @@
+@use '../functions' as f;
+@use '../mixins' as m;
+@use '../variables' as v;
+
+#footer {
+    background-color: var(--background);
+    .footer-container {
+        .content {
+            @include m.flex($direction: column, $justify: start, $items: stretch, $gap: 2rem);
+            @include m.respond(sm) {
+                @include m.flex($direction: row, $justify: space-between, $items: start, $gap: 2rem);
+            }
+
+            .content-wrapper  {
+                @include m.flex($direction: column, $justify: start, $items: start, $gap: .8rem);
+                .title {
+                    font-size: 1rem;
+                    font-weight: 500;
+                    color: f.mix-color($base: white,  $with: var(--text-colors) , $opacity: 100%);
+                }
+
+                .navs {
+                    list-style: none;
+                    @include m.flex($direction: column, $justify: start, $items: start, $gap: .6rem);
+                    .nav-link {
+                        text-decoration: none;
+                        font-size: 14px;
+                        transition: f.trans();
+                        color: f.mix-color($base: white,  $with: var(--text-colors) , $opacity: 40%);
+                        &:hover {
+                            color: f.mix-color($base: white,  $with: var(--text-colors) , $opacity: 100%);
+                        }
+                    }
+                }
+            }
+
+            .content-wrapper-1 {
+                .brand {
+                    img {
+                        width: 200px;
+                    }
+                }
+                .description {
+                    font-size: 14px;
+                    color: f.mix-color($base: white,  $with: var(--text-colors) , $opacity: 50%);
+                }
+            }
+        }
+    }
+
+    .footer-copyright {
+        border-top: 1px solid f.mix-color($base: white, $with: transparent, $opacity: 5%);
+        padding-block: 1.6rem;
+        @include m.flex($direction: column, $justify: center, $items: start, $gap: 10px);
+        @include m.respond(sm) {
+            @include m.flex($direction: row, $justify: space-between, $items: center, $gap: 10px);
+        }
+
+        p {
+            color: f.mix-color($base: white,  $with: var(--text-colors) , $opacity: 40%);
+            font-size: 14px;
+        }
+    }
+}

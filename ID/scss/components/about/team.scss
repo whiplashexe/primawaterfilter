@@ -1,0 +1,54 @@
+
+@use '../../functions' as f;
+@use '../../mixins' as m;
+@use '../../variables' as v;
+
+
+#about_team {
+    background-color: f.mix-color($base: var(--colors), $with: transparent, $opacity: 3%);
+    .about_team-container {
+        .content {
+            @include m.flex($direction: column, $justify: start, $items: stretch, $gap: 3rem);
+
+            .card-wrapper {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: clamp(.8rem, 3vw, 1rem);
+
+                @include m.respond(sm) {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+
+                .card {
+                    background-color: white;
+                    border-radius: 20px;
+                    border: 1px solid f.mix-color($base: black, $with: transparent, $opacity: 10%);
+                    overflow: hidden;
+                    @include m.flex($direction: column, $justify: start, $items: start, $gap: 0);
+
+                    .team-image {
+                        width: 100%;
+                        aspect-ratio: 16/12;
+                        object-fit: cover;
+                    }
+
+                    .card-content {
+                        margin-inline: auto;
+                        padding: clamp(1rem, 3vw, 2rem);
+                        @include m.flex($direction: column, $justify: center, $items: center, $gap: 10px);
+
+                        .name {
+                            font-size: 16px;
+                            color: var(--text-colors);
+                        }
+
+                        .role {
+                            font-size: 14px;
+                            color: f.mix-color($base: var(--text-colors), $with: transparent, $opacity: 70%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

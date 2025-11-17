@@ -1,0 +1,76 @@
+@use '../../functions' as f;
+@use '../../mixins' as m;
+@use '../../variables' as v;
+
+#slider {
+    background: #CDFBF2;
+    background: linear-gradient(117deg, rgba(205, 251, 242, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(223, 243, 254, 1) 100%);
+    .slider-container {
+        padding-block: 5rem;
+        @include m.respond(sm) {
+            padding-block: 7rem;
+        }
+        .content {
+            @include m.flex($direction: column, $justify: start, $items: start, $gap: 2rem);
+            @include m.respond(sm) {
+                @include m.flex($direction: row, $justify: center, $items: center, $gap: 2rem);
+            }
+
+            .content-1 {
+                @include m.flex($direction: column, $justify: start, $items: start, $gap: 1rem);
+
+                .title {
+                    font-size: 30px;
+                    color: var(--text-colors);
+                    font-weight: 500;
+                    line-height: 1.4;
+                    @include m.respond(sm) {
+                        font-size: 48px;
+                    }
+                }
+
+                .description {
+                    font-size: 1rem;
+                    color: var(--text-colors);
+                    line-height: 2;
+                }
+
+                .cta-wrapper {
+                    margin-top: 1rem;
+                    @include m.flex($direction: row, $justify: center, $items: center, $gap: .6rem);
+
+                    .cta {
+                        @include m.button($pb: 1rem);
+                    }
+
+                    .cta.cta-2 {
+                        background-color: transparent;
+                        color: var(--text-colors);
+                        border: 1px solid f.mix-color($base: transparent, $with: black, $opacity: 90%);
+                        &:hover {
+                            color: var(--colors);
+                            border-color: var(--colors);
+                        }
+                    }
+                }
+            }
+
+            .content-2 {
+                border-radius: 20px;
+                overflow: hidden;
+                aspect-ratio: 16/12;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        
+            .content-1, .content-2 {
+                @include m.respond(sm) {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}

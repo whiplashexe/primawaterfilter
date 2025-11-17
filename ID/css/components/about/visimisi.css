@@ -1,0 +1,64 @@
+#about-visimisi {
+  background-color: color-mix(in srgb, var(--colors) 3%, transparent);
+}
+#about-visimisi .about-visimisi-container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: 3rem;
+}
+#about-visimisi .about-visimisi-container .content .card-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  #about-visimisi .about-visimisi-container .content .card-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    gap: 2rem;
+  }
+}
+#about-visimisi .about-visimisi-container .content .card-wrapper .content-wrapper {
+  background-color: white;
+  padding: clamp(1.2rem, 3vw, 2rem);
+  border-radius: 20px;
+  border: 1px solid color-mix(in srgb, black 10%, transparent);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: nowrap;
+  gap: 0.8rem;
+}
+@media (min-width: 768px) {
+  #about-visimisi .about-visimisi-container .content .card-wrapper .content-wrapper {
+    width: 50%;
+  }
+}
+#about-visimisi .about-visimisi-container .content .card-wrapper .content-wrapper .title {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--colors);
+}
+#about-visimisi .about-visimisi-container .content .card-wrapper .content-wrapper .visi-text {
+  line-height: 1.8;
+  color: color-mix(in srgb, var(--text-colors) 60%, transparent);
+}
+#about-visimisi .about-visimisi-container .content .card-wrapper .content-wrapper .misi-text {
+  padding-left: 1rem;
+}
+#about-visimisi .about-visimisi-container .content .card-wrapper .content-wrapper .misi-text li {
+  line-height: 1.8;
+  color: color-mix(in srgb, var(--text-colors) 60%, transparent);
+}
+
+/*# sourceMappingURL=visimisi.css.map */

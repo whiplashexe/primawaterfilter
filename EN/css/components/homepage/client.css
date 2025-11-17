@@ -1,0 +1,68 @@
+#client {
+  background-color: color-mix(in srgb, var(--colors) 3%, transparent);
+}
+#client .client-container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: 2rem;
+}
+#client .client-container .content .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+#client .client-container .content .header .title {
+  font-size: 24px;
+  color: var(--text-colors);
+  font-weight: 600;
+}
+#client .client-container .content .card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: clamp(1rem, 3vw, 1.8rem);
+}
+@media (min-width: 768px) {
+  #client .client-container .content .card-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+#client .client-container .content .card-wrapper .card {
+  background-color: white;
+  border-radius: 18px;
+  padding: clamp(1rem, 3vw, 2rem);
+  border: 1px solid color-mix(in srgb, black 10%, transparent);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: nowrap;
+  gap: 0.8rem;
+}
+#client .client-container .content .card-wrapper .card .stars {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 4px;
+}
+#client .client-container .content .card-wrapper .card .stars i {
+  color: orange;
+}
+#client .client-container .content .card-wrapper .card .message {
+  font-size: 14px;
+  color: color-mix(in srgb, var(--text-colors) 70%, transparent);
+  line-height: 1.7;
+}
+#client .client-container .content .card-wrapper .card .author {
+  font-size: 14px;
+  color: color-mix(in srgb, var(--text-colors) 50%, transparent);
+  line-height: 1.7;
+}
+
+/*# sourceMappingURL=client.css.map */

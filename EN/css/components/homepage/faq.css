@@ -1,0 +1,92 @@
+#faq {
+  background-color: color-mix(in srgb, var(--colors) 3%, transparent);
+}
+#faq .faq-container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 3rem;
+}
+#faq .faq-container .content .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+#faq .faq-container .content .header .title {
+  font-size: 24px;
+  color: var(--text-colors);
+  font-weight: 600;
+}
+#faq .faq-container .content .card-wrapper {
+  width: 100%;
+  max-width: 64rem;
+  border: 1px solid color-mix(in srgb, black 5%, transparent);
+  border-radius: 20px;
+  overflow: hidden;
+}
+#faq .faq-container .content .card-wrapper .card {
+  overflow: hidden;
+  padding: clamp(1.6rem, 3vw, 1.8rem);
+  border-bottom: 1px solid color-mix(in srgb, black 5%, transparent);
+  display: grid;
+  transition: all ease-in-out 0.3s;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 0fr;
+  background-color: white;
+}
+#faq .faq-container .content .card-wrapper .card:last-child {
+  border-bottom: none;
+}
+#faq .faq-container .content .card-wrapper .card .question {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+#faq .faq-container .content .card-wrapper .card .question .title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.8;
+  color: var(--text-colors);
+}
+#faq .faq-container .content .card-wrapper .card .question .faq-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  transition: all ease-in-out 0.3s;
+}
+#faq .faq-container .content .card-wrapper .card .question .faq-btn.faq-active {
+  rotate: 45deg;
+}
+#faq .faq-container .content .card-wrapper .card .question .faq-btn i {
+  font-size: 12px;
+  color: var(--text-colors);
+}
+#faq .faq-container .content .card-wrapper .card .answer {
+  transition: all ease-in-out 0.3s;
+  overflow: hidden;
+}
+#faq .faq-container .content .card-wrapper .card .answer .desc {
+  font-size: 14px;
+  color: color-mix(in srgb, var(--text-colors) 70%, transparent);
+  line-height: 1.6;
+}
+#faq .faq-container .content .card-wrapper .card .answer.faq-active {
+  padding-top: 1rem;
+}
+#faq .faq-container .content .card-wrapper .card.faq-active {
+  grid-template-rows: auto 1fr;
+}
+
+/*# sourceMappingURL=faq.css.map */

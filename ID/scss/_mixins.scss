@@ -1,0 +1,57 @@
+@use 'functions' as f;
+
+$breakpoints: (
+  xs: 480px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px,
+  xl: 1440px
+);
+
+@mixin flex(
+  $direction: row,
+  $justify: flex-start,
+  $items: stretch,
+  $wrap: nowrap,
+  $gap: null
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $items;
+  flex-wrap: $wrap;
+
+  @if $gap != null {
+    gap: $gap;
+  }
+}
+
+@mixin respond($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint);
+
+  @if $value {
+    @media (min-width: $value) {
+      @content;
+    }
+  } @else {
+    @warn "⚠️ Breakpoint `#{$breakpoint}` not found in $breakpoints map.";
+  }
+}
+
+@mixin button($bg: var(--colors), $pb: 10px, $pi: 20px, $br: 0.75rem, $cl: white, $fs: .8rem) {
+  background-color: $bg;
+  padding-block: $pb;
+  padding-inline: $pi;
+  border-radius: $br;
+  color: $cl;
+  font-family: var(--primtext);
+  font-size: $fs;
+  transition: f.trans();
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: f.mix-color();
+  }
+}
+

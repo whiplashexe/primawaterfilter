@@ -1,0 +1,138 @@
+@use '../../functions' as f;
+@use '../../mixins' as m;
+@use '../../variables' as v;
+
+#product {
+    background-color: white;
+    .product-container {
+        .content {
+            @include m.flex($direction: column, $justify: start, $items: stretch, $gap: 2rem);
+
+            .content-wrapper-1 {
+                .product-image {
+                    width: 100%;
+                    border-radius: 20px;
+                }
+            }
+
+            .content-wrapper-2 {
+                @include m.flex($direction: column, $justify: start, $items: start, $gap: 1rem);
+
+                .product-content {
+                    @include m.flex($direction: column, $justify: start, $items: start, $gap: 1.4rem);
+
+                    .title {
+                        font-size: 24px;
+                        font-weight: 500;
+                    }
+
+
+                    ul {
+                        padding-left: 1rem;
+                    }
+
+                    p, li {
+                        line-height: 1.7;
+                        color: f.mix-color($base: var(--text-colors), $with: transparent, $opacity: 70%);
+                    }
+                }
+
+                .product-content.product-features {
+                    .title {
+                        color: var(--colors);
+                        font-size: 20px;
+                    }
+                }
+
+
+                .product-content.product-specification {
+                    .title {
+                        color: var(--colors);
+                        font-size: 20px;
+                    }
+                    ul {
+                        list-style: none;
+                        padding-left: 0;
+                    }
+                }
+
+                .ctas {
+                    @include m.flex($justify: start, $items: center, $gap: 8px);
+
+                    .cta {
+                        @include m.button($pb: 16px, $pi: 24px);
+                        &.cta-whatsapp {
+                            background-color: white;
+                            color: var(--colors);
+                            border: 1px solid var(--colors);
+                            &:hover {
+                                background-color: f.mix-color($base: var(--colors), $with: transparent, $opacity: 10%);
+                            }
+                        }
+                    }
+                }
+            }
+            @include m.respond(sm) {
+                @include m.flex($direction: row, $justify: center, $items: center, $gap: 3rem);
+                .content-wrapper {
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+    .product-description-container {
+        background-color: f.mix-color($base: var(--colors), $with: transparent, $opacity: 3%);
+
+        .content {
+            width: 100%;
+            @include m.flex($direction: column, $justify: start, $items:center, $gap: 2rem);
+
+            .title {
+                font-size: 24px;
+                font-weight: 500;
+                color: var(--text-colors);
+            }
+
+            .list-wrapper {
+                @include m.flex($direction: column, $justify: start, $items: stretch, $gap: 1rem);
+                width: 100%;
+
+                ul {
+                    @include m.flex($direction: column, $justify: start, $items: stretch, $gap: 1rem);
+
+                    li {
+                        font-size: 14px;
+                        color: f.mix-color($base: var(--text-colors), $with: transparent, $opacity: 70%);
+                        line-height: 1.8;
+                    }
+                }
+
+                @include m.respond(sm) {
+                    @include m.flex($direction: row, $justify: center, $items: center);
+                    ul {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+
+    .product-panduan-container {
+        background-color: white;
+        .content {
+            @include m.flex($direction: column, $justify: start, $items: start, $gap: 1.4rem);
+            .title {
+                font-size: 24px;
+                font-weight: 500;
+                color: var(--text-colors);
+            }
+
+            .desc {
+                font-size: 14px;
+                line-height: 1.8;
+                color: f.mix-color($base: var(--text-colors), $with: transparent, $opacity: 70%);
+            }
+        }
+    }
+}

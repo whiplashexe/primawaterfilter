@@ -1,0 +1,78 @@
+@use '../../functions' as f;
+@use '../../mixins' as m;
+@use '../../variables' as v;
+
+#resource {
+    background-color: white;
+    .resource-container {
+        .content {
+            @include m.flex($direction: column, $justify: start, $items: stretch, $gap: 2rem);
+
+            .header {
+                @include m.flex($justify: space-between, $items: center);
+
+                .title {
+                    font-size: 24px;
+                    color: var(--text-colors);
+                    font-weight: 600;
+                }
+
+                .cta {
+                    color: var(--colors);
+                    text-decoration: none;
+                    font-size: 14px;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .card-wrapper {
+                gap: clamp(1rem, 3vw, 1.8rem);
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+
+                @include m.respond(sm) {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+                
+                .card {
+                    @include m.flex($justify: start, $items: stretch, $direction: column);
+                    border-radius: 20px;
+                    overflow: hidden;
+                    border: 1px solid f.mix-color($base: black, $with: transparent, $opacity: 10%);
+
+                    .cover {
+                        width: 100%;
+                    }
+
+                    .content-wrapper {
+                        padding: 1.4rem;
+                        @include m.flex($direction: column, $justify: start, $items: start, $gap: .8rem);
+
+                        .title {
+                            font-size: 16px;
+                            font-weight: 600;
+                            color: var(--text-colors);
+                        }
+
+                        .desc {
+                            font-size: 14px;
+                            color: f.mix-color($base: var(--text-colors), $with: transparent, $opacity: 70%);
+                        }
+
+                        .cta {
+                            font-size: 14px;
+                            margin-top: 8px;
+                            color: var(--colors);
+                            text-decoration: none;
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+@use '../../functions' as f;
+@use '../../mixins' as m;
+@use '../../variables' as v;
+
+#service_list {
+    background-color: white;
+    .service_list-container {
+        .content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: clamp(1rem, 3vw, 2rem);
+
+            @include m.respond(sm) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .card {
+                padding: clamp(2rem, 3vw, 2.4rem);
+                border-radius: 20px;
+                @include m.flex($direction: column, $justify: start, $items: start, $gap: 14px);
+                border: 1px solid f.mix-color($base: black, $with: transparent, $opacity: 10%);
+
+                .title {
+                    font-size: 24px;
+                    font-weight: 500;
+                    color: var(--text-colors);
+                }
+
+                .list {
+                    padding-left: 1rem;
+                }
+                p, li {
+                    font-size: 14px;
+                    color: f.mix-color($base: var(--text-colors), $with: transparent, $opacity: 60%);
+                    line-height: 1.6;
+                }
+
+                .cta {
+                    margin-top: 1rem;
+                    @include m.button();
+                }
+            }
+        }
+    }
+}

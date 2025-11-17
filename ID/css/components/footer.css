@@ -1,0 +1,85 @@
+#footer {
+  background-color: var(--background);
+}
+#footer .footer-container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  #footer .footer-container .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: nowrap;
+    gap: 2rem;
+  }
+}
+#footer .footer-container .content .content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: nowrap;
+  gap: 0.8rem;
+}
+#footer .footer-container .content .content-wrapper .title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: color-mix(in srgb, white 100%, var(--text-colors));
+}
+#footer .footer-container .content .content-wrapper .navs {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: nowrap;
+  gap: 0.6rem;
+}
+#footer .footer-container .content .content-wrapper .navs .nav-link {
+  text-decoration: none;
+  font-size: 14px;
+  transition: all ease-in-out 0.3s;
+  color: color-mix(in srgb, white 40%, var(--text-colors));
+}
+#footer .footer-container .content .content-wrapper .navs .nav-link:hover {
+  color: color-mix(in srgb, white 100%, var(--text-colors));
+}
+#footer .footer-container .content .content-wrapper-1 .brand img {
+  width: 200px;
+}
+#footer .footer-container .content .content-wrapper-1 .description {
+  font-size: 14px;
+  color: color-mix(in srgb, white 50%, var(--text-colors));
+}
+#footer .footer-copyright {
+  border-top: 1px solid color-mix(in srgb, white 5%, transparent);
+  padding-block: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+@media (min-width: 768px) {
+  #footer .footer-copyright {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+}
+#footer .footer-copyright p {
+  color: color-mix(in srgb, white 40%, var(--text-colors));
+  font-size: 14px;
+}
+
+/*# sourceMappingURL=footer.css.map */

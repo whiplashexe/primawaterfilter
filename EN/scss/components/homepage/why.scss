@@ -1,0 +1,34 @@
+@use '../../functions' as f;
+@use '../../mixins' as m;
+@use '../../variables' as v;
+
+#why {
+    background: white;
+    .why-container {
+        padding-block: 2rem;
+        border-block: 1px solid f.mix-color($base: black, $with: transparent, $opacity: 10%);
+        @include m.flex($justify: center, $items: center);
+
+        .content {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1rem;
+
+            @include m.respond(sm) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .card {
+                border: 1px solid f.mix-color($base: black, $with: transparent, $opacity: 10%);
+                padding: 1rem;
+                border-radius: 0.75rem;
+
+                .title {
+                    color: f.mix-color($base: var(--text-colors), $with: transparent, $opacity: 70%);
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
