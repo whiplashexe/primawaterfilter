@@ -44,11 +44,7 @@ $home_products_data = json_decode(json_encode([
 
             <div class="card-wrapper">
                 <?php foreach ($home_products_data as $key => $data): ?>
-                <article class="card">
-                    <h3 class="title"><?= $data->title ?></h3>
-                    <p class="desc"><?= $data->desc ?></p>
-                    <a class="cta" href="<?= $data->link ?>">Tanya stok & harga <i class="fas fa-arrow-right"></i> </a>
-                </article>
+                <?php include "card/product.php" ?>
                 <?php endforeach; ?>
             </div>
         </div>

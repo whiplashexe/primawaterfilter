@@ -38,9 +38,14 @@
     <link rel="stylesheet" href="./css/components/homepage/why.css">
     <link rel="stylesheet" href="./css/components/homepage/service.css">
     <link rel="stylesheet" href="./css/components/homepage/recommendation.css">
-    <link rel="stylesheet" href="./css/components/homepage/home_products.css">
     <link rel="stylesheet" href="./css/components/homepage/review.css">
+
+    <link rel="stylesheet" href="./css/components/homepage/home_products.css">
+    <link rel="stylesheet" href="./css/components/homepage/card/product.css">
+
     <link rel="stylesheet" href="./css/components/homepage/blogs.css">
+    <link rel="stylesheet" href="./css/components/homepage/card/blog.css">
+
     <link rel="stylesheet" href="./css/components/homepage/faq.css">
     <link rel="stylesheet" href="./css/components/footer.css">
 </head>
