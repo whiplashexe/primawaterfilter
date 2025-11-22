@@ -1,0 +1,51 @@
+
+@use '../../functions' as f;
+@use '../../mixins' as m;
+@use '../../variables' as v;
+
+#cta {
+  background-color: var(--colors);
+  
+  .cta-container {
+
+    .content {
+      @include m.flex($justify: start, $items: center, $direction: column, $gap: 2rem);
+
+      .text {
+        text-align: center;
+        @include m.flex($justify: center, $items: center, $direction: column, $gap: .7rem);
+        line-height: 1.8;
+      }
+
+      .title {
+        color: white;
+        font-size: 22px;
+        font-family: var(--primtext);
+      }
+
+      .desc {
+        font-size: 16px;
+        color: f.mix-color($base: white, $with: transparent, $opacity: 70%);
+      }
+
+      .cta {
+        @include m.button($bg: white, $cl: var(--colors), $fs: .9rem, $pb: 14px, $pi: 24px);
+        font-weight: bold;
+      }
+
+      @include m.respond(sm) {
+        @include m.flex($justify: center, $items: center, $direction: row, $gap: 12rem);
+
+        .text {
+          flex: 1;
+          text-align: start;
+          @include m.flex($justify: center, $items: start, $direction: column, $gap: .7rem);
+        }
+
+        .title {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}

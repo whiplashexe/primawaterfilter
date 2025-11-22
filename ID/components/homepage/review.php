@@ -28,10 +28,7 @@ $review_data = json_decode(json_encode([
             </header>
             <div class="card-wrapper">
                 <?php foreach ($review_data as $key => $review): ?>
-                <article class="card">
-                    <p class="message">"<?= $review->message ?>"</p>
-                    <p class="profile"><?= $review->name ?> - <?= $review->location ?> </p>
-                </article>
+                <?php include "card/review.php" ?>
                 <?php endforeach; ?>
             </div>
         </div>

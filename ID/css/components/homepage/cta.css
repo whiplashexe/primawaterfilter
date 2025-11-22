@@ -1,0 +1,73 @@
+#cta {
+  background-color: var(--colors);
+}
+#cta .cta-container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 2rem;
+}
+#cta .cta-container .content .text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.7rem;
+  line-height: 1.8;
+}
+#cta .cta-container .content .title {
+  color: white;
+  font-size: 22px;
+  font-family: var(--primtext);
+}
+#cta .cta-container .content .desc {
+  font-size: 16px;
+  color: color-mix(in srgb, white 70%, transparent);
+}
+#cta .cta-container .content .cta {
+  background-color: white;
+  padding-block: 14px;
+  padding-inline: 24px;
+  border-radius: 0.75rem;
+  color: var(--colors);
+  font-family: var(--primtext);
+  font-size: 0.9rem;
+  transition: all ease-in-out 0.3s;
+  text-decoration: none;
+  cursor: pointer;
+}
+#cta .cta-container .content .cta:hover {
+  background-color: color-mix(in srgb, var(--colors) 70%, black);
+}
+#cta .cta-container .content .cta {
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  #cta .cta-container .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 12rem;
+  }
+  #cta .cta-container .content .text {
+    flex: 1;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: nowrap;
+    gap: 0.7rem;
+  }
+  #cta .cta-container .content .title {
+    font-size: 24px;
+  }
+}
+
+/*# sourceMappingURL=cta.css.map */

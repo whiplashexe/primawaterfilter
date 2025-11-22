@@ -3,17 +3,19 @@ $blogs_data = json_decode(json_encode([
     [
         'title' => '5 Tanda Air di Rumahmu Butuh Filter',
         'desc'  => 'Kenali gejala umum sebelum masalah semakin besar.',
-        'link'  => ''
+        'link'  => '',
+        'img_cover_url' => 'https://jwc.gotra-resources.my.id/web-upload/1743049700-27-03-2025-NkQceHJ21CtYymfK0oVhxg6TbIndD8Ui.webp'
     ],
     [
         'title' => 'RO vs UV — Mana yang Lebih Efektif?',
         'desc'  => 'Penjelasan singkat untuk kebutuhan rumah dan bisnis.',
-        'link'  => ''
+        'link'  => '',
+        'img_cover_url' => 'https://jwc.gotra-resources.my.id/web-upload/1743049700-27-03-2025-NkQceHJ21CtYymfK0oVhxg6TbIndD8Ui.webp'
     ],
     [
         'title' => 'Cara Merawat Filter Agar Tetap Awet',
         'desc'  => 'Checklist sederhana untuk pemilik rumah dan villa.',
-        'link'  => ''
+        'link'  => '',
     ]
 ]));
 ?>

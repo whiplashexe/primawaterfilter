@@ -27,6 +27,11 @@
   flex-wrap: nowrap;
   gap: 0.6rem;
 }
+#why .why-container .content .card-wrapper .card .icon {
+  margin-bottom: 1rem;
+  color: var(--colors);
+  font-size: 2rem;
+}
 #why .why-container .content .card-wrapper .card .title {
   font-size: 16px;
   color: var(--text-colors);

@@ -23,6 +23,12 @@
                     border: 1px solid f.mix-color($base: black, $with: transparent, $opacity: 10%);
                     @include m.flex($direction: column, $justify: start, $items: start, $gap: .6rem);
 
+                    .icon {
+                        margin-bottom: 1rem;
+                        color: var(--colors);
+                        font-size: 2rem;
+                    }
+
                     .title {
                         font-size: 16px;
                         color: var(--text-colors);
